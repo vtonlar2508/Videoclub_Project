@@ -1,12 +1,13 @@
 <?php
-        class CintaVideo extends Soporte {
+class CintaVideo extends Soporte {
         private float $duracion;
-                
-        public function getResumen() : void {
-                echo "Nombre: " . $this -> nombre;
-                echo "Precio base: " . Soporte::getPrecio();
-                echo "Precio + Iva: " . Soporte::getPrecioIva();
-        	echo "Número: " . Soporte::getNumero();
+                        
+        public function MuestraResumen() : void { //Este método no devuelve nada, solo imprime
+                echo "Nombre: " . $this -> titulo . "<br>";
+                echo "Precio base: " . $this -> precio . "<br>";
+                echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>";
+                echo "Número: " . $this -> numero;
+                echo "Duración: " . $this -> duracion;
         }
 }
 ?>
