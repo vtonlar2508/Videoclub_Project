@@ -4,7 +4,7 @@
 	</head>
 	<body>
 	<?php
-		abstract class Soporte{
+		class Soporte{
 		    public string $titulo;
 		    protected int $numero;
 		    private float $precio;
