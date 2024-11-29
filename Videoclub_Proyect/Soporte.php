@@ -4,7 +4,7 @@ class Soporte{ //Es declara la clase padre Soporte
     protected int $numero;
     private float $precio;
     
-    public function __construct(string $titulo, int $numero, float $precio) { //Se da el valor de cada argumento a su variable de clase correspondiente        
+    public function __construct(string $titulo, int $numero, float $precio) { //Se da el valor de cada argumento a su variable de clase correspondiente
         $this -> titulo = $titulo;
         $this -> numero = $numero;
         $this -> precio = $precio;
