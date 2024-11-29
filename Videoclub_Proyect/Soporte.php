@@ -3,7 +3,7 @@
 	<meta charset="UTF-8">
 	</head>
 	<body>
-	<?php
+		<?php
 		class Soporte{
 		    public string $titulo;
 		    protected int $numero;
@@ -19,7 +19,7 @@
 		        return $this -> precio;
 		    }
 		    
-		    public function getPrecioIva() : float {
+		    public function getPrecioConIVA() : float {
 		        return $this -> precio * 1.21;
 		    }
 		    
@@ -27,13 +27,13 @@
 		        return $this -> numero;
 		    }
 		    
-		    public function getResumen() : void {
-		        echo "Nombre: " . $this -> nombre;
-		        echo "Precio base: " . Soporte::getPrecio();
-		        echo "Precio + IVA: " . Soporte::getPrecioIva();
-		        echo "Número: " . Soporte::getNumero();
+		    public function MuestraResumen() : void {
+		        echo "Nombre: " . $this -> titulo . "<br>";
+		        echo "Precio base: " . $this -> precio . "<br>";
+		        echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>";
+		        echo "Número: " . $this -> numero;
 		    }
 		}
-	?>
+		?>
 	</body>
 </html>
