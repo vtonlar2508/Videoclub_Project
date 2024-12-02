@@ -17,9 +17,8 @@
         //En muestraResumen se sobreescriben los resultados de los objetos anterior mencionados...
         //... el unico objetivo de esta clase es imprimir
         public function muestraResumen() : void{
-            echo "Pelicula en DVD : <br>" . $this -> titulo . "<br>";
-            echo "Precio base: " . parent::getPrecio() . "<br>";
-            echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>";
+            echo "Pelicula en DVD : <br>" ."<I>". $this -> titulo ."</I>". "<br>";
+            echo parent::getPrecio() ." ( IVA no incluido )" .  "<br>";
             echo "Idioma: " . $this -> idioma . "<br>";
             echo "Format Pantalla: " . $this -> formatPantalla;
         }
