@@ -23,10 +23,8 @@ class Soporte{ //Es declara la clase padre Soporte
     }
     
     public function muestraResumen() : void { //Este método no devuelve nada, solo imprime
-        echo "Nombre: " . $this -> titulo . "<br>";
-        echo "Precio base: " . $this -> precio . "<br>";
-        echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>";
-        echo "Número: " . $this -> numero;
+        echo "<I>" . $this -> titulo . "</I><br>";
+        echo $this -> precio . " (IVA no incluido)<br>";
     }
 }
 ?>
