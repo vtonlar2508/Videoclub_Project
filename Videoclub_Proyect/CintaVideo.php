@@ -13,11 +13,12 @@ class CintaVideo extends Soporte {
         public function muestraResumen() : void { 
                 //El método muestraResumen se sobreescribe al método muestraResumen de la clase padre, sustituyéndolo
                 //Este método no devuelve nada, solo imprime
-                echo "Nombre: " . $this -> titulo . "<br>";
-                echo "Precio base: " . parent::getPrecio() . "<br>"; //Para acceder a las variables privadas heredadas se usa un getter. Se puede poner como parent...
-                echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>"; //... o como el nombre de la clase, Soporte.
-                echo "Número: " . $this -> numero . "<br>";
-                echo "Duración: " . $this -> duracion;
+                echo "<I>" . $this -> titulo . "</I><br>";
+                //Para acceder a las variables privadas heredadas se usa un getter. Se puede poner como parent...
+                echo parent::getPrecio() . " (IVA no incluido)<br>";
+                //... o como el nombre de la clase, Soporte, como en este ejemplo comentado.
+                // echo "Precio + IVA: " . Soporte::getPrecioConIva() . "<br>";
+                echo "Duración: " . $this -> duracion . " minutos";
         }
 }
 ?>
