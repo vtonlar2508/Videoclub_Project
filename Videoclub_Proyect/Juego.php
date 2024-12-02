@@ -14,7 +14,6 @@ class Juego extends Soporte {
     public function muestraResumen() : void {
         echo $this -> titulo . "<br>";
         echo parent::getPrecio() . " € (IVA no incluido)<br>";
-        echo "Número: " . $this -> numero . "<br>";
         if ($this -> numMinJugadores === $this -> numMaxJugadores) { //Si el número de jugadores mínimos y máximos es el mismo lo dice de una manera
             if ($this -> numMinJugadores === 1) {
                 echo "Para un jugador"; //Uso el singular para un solo jugador mínimo y máximo
