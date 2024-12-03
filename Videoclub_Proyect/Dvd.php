@@ -1,5 +1,5 @@
 <?php
-   include "Soporte.php";
+   include_once "Soporte.php";
    class Dvd extends Soporte{
        //La clase Dvd es hija de Soporte
         public string $idioma;//Se añade las propiedades idioma y...
