@@ -46,7 +46,7 @@ class Cliente{
         } elseif ($this -> numeroSoportesAlquilados >= $this -> maxAlquilerConcurrente ) { //Si el número de soportes alquilados es el máximo o mayor no alquila
             $estado = false;
             //Imprimimos el problema
-            echo ("<br>Este cliente tiene {$this -> numeroSoportesAlquilados} elementos alquilados. No puede alquilar más en este videoclub hasta que no devuelva algo</b><br><br>");
+            echo ("<br>Este cliente tiene {$this -> numeroSoportesAlquilados} elementos alquilados. No puede alquilar más en este videoclub hasta que no devuelva algo</b><br>");
         } else { //Si se puede alquilar se hace, y se añade uno al número de soportes alquilados
             array_push($this -> soportesAlquilados, $s); //Se añade el nuevo soporte al array
             $this -> numeroSoportesAlquilados ++; //Se suma uno al número de soportes alquilados
@@ -59,28 +59,28 @@ class Cliente{
         return $estado;
     }
     
-    public function devolver(int $numSoporte) : bool { //Devolverá true si se ha decuelto y false si no se ha podido devolver
+    public function devolver(int $numSoporte) : bool { //Devolverá true si se ha devuelto y false si no se ha podido devolver
         $estado = false; //Se empieza con el estado que devolveremos en false por defecto
-        for ($i = 0; $i < count($this -> soportesAlquilados) && $estado = true; $i++) { //Se recorre el array hasta terminarlo o encontrar el soporte
+        for ($i = 0; $i < count($this -> soportesAlquilados) && !$estado; $i++) { //Se recorre el array hasta terminarlo o encontrar el soporte
             //Si el número del soporte de la posición $i del array es igual al número de soporte dado...
             if ($this -> soportesAlquilados[$i] -> getNumero() === $numSoporte) {
                 //... se elimina el soporte de la posición $i,...
                 unset($this -> soportesAlquilados[$i]);
                 //... se reindexa para que el array tenga un número de posiciones igual al número de soportes alquilados,...
-                $this -> soportesAlquilados[$i] = array_values($this -> soportesAlquilados[$i]);
+                $this -> soportesAlquilados[$i] = array_values($this -> soportesAlquilados);
                 //... se resta uno al número de soportes alquilados...
                 $this -> numeroSoportesAlquilados --;
                 //... y finalmente estado cambia a true y para que salga del for al acabar.
                 $estado = true;
                 // Imprimimos
-                echo ("<b>Soporte de número ${$numSoporte} por:</b> ${$this -> nombre}<br><br><br>");
+                echo ("<b>Soporte de número {$numSoporte} por:</b> {$this -> nombre}<br><br><br>");
                 echo ("<br><br><br>");
             }
         }
         if (!$estado && $this -> numeroSoportesAlquilados <= 0) { //Si no tiene nada alquilado no lo puede devolver, lo imprimimos
             echo ("Este cliente no tiene alquilado ningún elemento<br>");
         } elseif (!$estado) { //Si no lo tiene alquilado no lo puede devolver, lo imprimimos
-            echo ("No se ha podido encontrar el soporte en los alquileres de este cliente<br>");
+            echo ("<br>No se ha podido encontrar el soporte en los alquileres de este cliente<br>");
         }
         return $estado;
     }
