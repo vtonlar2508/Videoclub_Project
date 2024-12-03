@@ -1,5 +1,5 @@
 <?php
-include "Soporte.php";
+include_once "Soporte.php"; //include_once para importar la clase Soporte y que si lo volvemos a importar en otra clase solo se importe una vez
 class CintaVideo extends Soporte {
         //CintaVideo es el hijo de Soporte, y por tanto Soporte es el padre de CintaVideo
         //CintaVideo hereda propiedades y métodos de su padre Soporte, y además puede añadirlos y reescribirlos
