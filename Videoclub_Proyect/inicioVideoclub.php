@@ -16,6 +16,9 @@ $vc->incluirCintaVideo ("El nombre de la Rosa", 1.5, 140);
 $vc->listarProductos();
 
 //voy a crear algunos socios
+//- He intercambiado quién tiene el límite de alquileres concurrentes
+//- El motivo es que el error no se veía como se pretendía con los datos anteriores
+//- Está mejor explicado en el segundo comentario de Fernando Gaitán en la actividad de Classroom
 $vc->incluirSocio("Amancio Ortega", 2);
 $vc->incluirSocio ("Pablo Picasso");
             
