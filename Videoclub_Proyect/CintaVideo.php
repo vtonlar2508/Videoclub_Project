@@ -5,7 +5,8 @@ class CintaVideo extends Soporte {
         //CintaVideo hereda propiedades y métodos de su padre Soporte, y además puede añadirlos y reescribirlos
         private float $duracion; //Se añade una nueva propiedad solo de CintaVideo
         
-        public function __construct(string $titulo, int $numero, float $precio, float $duracion) { //Se da el valor de cada argumento a su variable de clase correspondiente
+        public function __construct(string $titulo, int $numero, float $precio, float $duracion) {
+                //Se da el valor de cada argumento a su variable de clase correspondiente
             parent::__construct($titulo, $numero, $precio); //Se utiliza el constructor del padre para asignar valores a las variables heredadas
             $this -> duracion = $duracion;
         }
