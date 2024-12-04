@@ -38,7 +38,7 @@ class Cliente{
     }
     
     public function alquilar(Soporte $s) : bool { //Esta función va a devolver true si se ha alquilado y false si no se ha podido alquilar
-        $estado;
+        $estado = false;
         if (in_array($s, $this -> soportesAlquilados)) { //Si ya tiene alquilado ese soporte no alquila
             $estado = false;
             //Imprimimos el problema
