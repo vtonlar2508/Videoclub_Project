@@ -1,5 +1,6 @@
 <?php //A partir de aquí lee el intérprete de PHP
-abstract class Soporte{ //Es declara la clase padre Soporte
+include "Resumible.php";
+abstract class Soporte implements Resumible { //Es declara la clase padre Soporte
     public string $titulo; //Hemos puesto el tipo de cada variable para evitar errores
     protected int $numero;
     private float $precio;
