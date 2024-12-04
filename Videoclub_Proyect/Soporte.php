@@ -1,5 +1,5 @@
 <?php //A partir de aquí lee el intérprete de PHP
-class Soporte{ //Es declara la clase padre Soporte
+abstract class Soporte{ //Es declara la clase padre Soporte
     public string $titulo; //Hemos puesto el tipo de cada variable para evitar errores
     protected int $numero;
     private float $precio;
