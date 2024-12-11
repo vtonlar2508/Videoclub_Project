@@ -23,7 +23,24 @@ Los archivos que empiezan por inicio solo sirven para ejecutarse y probar las de
 
 ### Resumible.php (Interfaz)
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+* muestraResumen() : void
+
+### Soporte.php (Abstracta)
+
+* __construct(string $titulo, int $numero, float $precio)
+* getPrecio() : float
+* getPrecioConIVA() : float
+* getNumero() : int
+* muestraResumen() : void
+
+### CintaVideo.php
+* __construct(string $titulo, int $numero, float $precio, float $duracion)
+* muestraResumen() : void
+
+### Dvd.php
+* __construct(string $titulo, int $numero, float $precio, string $idiomas, string $formatPantalla)
+* muestraResumen() : void
+
 
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
