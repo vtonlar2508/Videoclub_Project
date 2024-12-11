@@ -41,22 +41,28 @@ Los archivos que empiezan por inicio solo sirven para ejecutarse y probar las de
 * __construct(string $titulo, int $numero, float $precio, string $idiomas, string $formatPantalla)
 * muestraResumen() : void
 
+### Juego.php
+* __construct(string $titulo, int $numero, float $precio, string $consola, int $numMinJugadores, int $numMaxJugadores)
+* muestraResumen() : void
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
-   ```
+### Cliente
+* __construct(string $nombre, int $numero, int $maxAlquilerConcurrente = 3)
+* getNumero() : int
+* setNumero(int $numero) : void
+* getNumeroSoportesAlquilados() : int
+* muestraResumen() : void
+* tieneAlquilado(Soporte $s) : bool
+* alquilar(Soporte $s) : bool
+* devolver(int $numSoporte) : bool
+* listarAlquileres() : void
+
+### Videoclub
+* __construct($nombre)
+* incluirProducto(Soporte $producto) : void
+* incluirCintaVideo (string $titulo, float $precio, float $duracion) : void
+* incluirDvd (string $titulo, float $precio, string $idiomas, string $pantalla) : void
+* incluirJuego (string $titulo, float $precio, string $consola, int $minJ, int $maxJ) : void
+* incluirSocio (string $nombre, int $maxAlquileresConcurrentes = 3) : void
+* listarProductos() : void
+* listarSocios() : void
+* alquilaSocioProducto(int $numeroCliente, int $numeroSoporte) : void
