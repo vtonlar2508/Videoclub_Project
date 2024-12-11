@@ -2,7 +2,9 @@
 ### Realizado por Victor Patrick Tonna Lara y Francisco Fernando Gaitán Pérez
 
 Este es un proyecto para el módulo de Desarrollo en Entorno Servidor del Grado Superior de Desarrollo de Aplicaciones Web en el I.E.S. Kursaal.
+
 La actividad consiste en realizar varias clases en PHP que se relacionan entre si con herencias, implementaciones o interfaces entre otras herramientas.
+
 En este README explicaremos cómo se utilizan estas clases y cuál es la estructura de los datos.
 
 Las clases que tenemos son:
